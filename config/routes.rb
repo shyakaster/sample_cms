@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   #get 'demo/index'
 
   root "demo#index"
@@ -59,5 +60,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  match ':controller(/:action(/:id))', :via => :get
+  match ':controller(/:action(/:id))', :via => [:get,:post]
 end

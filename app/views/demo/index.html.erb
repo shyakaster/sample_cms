@@ -4,3 +4,7 @@
 <a href="/demo/hello" >Link to hello view</a><br/>
 
 <%= link_to("Link to hello view",{:action=>'hello',:page=>5, :id=>20})%>
+<hr/>
+<% name='alert("I have hacked you!");'%>
+<%= link_to('Roar','#',:onclick=>"jsRoar('#{j(name)}'); return true;")%>
+<%= javascript_tag("jsRoar('#{j(name)}');") %>

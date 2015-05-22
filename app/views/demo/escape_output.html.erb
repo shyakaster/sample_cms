@@ -1,0 +1,8 @@
+<% evil_string ="<script> alert('Hey!')</script>"%>
+<% good_string ="<a href='#'><strong>Good string here</strong></a>"%>
+<%= sanitize(evil_string) %>
+<%= sanitize(good_string, :tags=>['strong']) %><br/>
+
+    <%=strip_links(good_string) %><br/>
+    <%=strip_tags(good_string) %>
+

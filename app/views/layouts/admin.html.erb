@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple CMS | <%=@page_tile|| 'Admin' %></title>
+ <%= stylesheet_link_tag('application', :media=>'all') %>
+</head>
+<body>
+<div class="header">
+  <h2>Simple CMS Admin</h2>
+</div>
+
+<div class="main">
+  <div class="flush-message">
+    <%if !flash[:notice].blank?%>
+        <div class="flash-notice">
+          <%= flash[:notice] %>
+        </div>
+    <%end%>
+  </div>
+  <div class="content">
+    <%= yield %>
+  </div>
+</div>
+<div class="footer">
+  <p id="copyright">&copy; todidea.org</p>
+</div>
+
+</body>
+</html>
